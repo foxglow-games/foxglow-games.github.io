@@ -34,8 +34,8 @@ a { color: var(--accent); }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 900; font-size: 1.15rem; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--text); text-decoration: none; font-weight: 900; font-size: 1.15rem; }
 .brand-mark { width: 30px; height: 30px; }
 .nav { display: flex; gap: 22px; }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 700; font-size: 0.95rem; }
@@ -85,6 +85,7 @@ section { padding: 72px 0; }
   border: 1px solid var(--border); color: var(--text); background: var(--surface-2);
 }
 .pill.soon { color: var(--muted); cursor: default; }
+.pill.play { background: linear-gradient(90deg, var(--accent), #ff6a5b); color: #1a0f00; border-color: transparent; }
 
 .about { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .about p { max-width: 680px; color: var(--muted); font-size: 1.05rem; }
@@ -109,4 +110,11 @@ section { padding: 72px 0; }
   .nav a.hide-sm { display: none; }
   .hero { padding: 64px 0 56px; }
   section { padding: 56px 0; }
+}
+
+@media (max-width: 380px) {
+  .brand { font-size: 1rem; gap: 8px; }
+  .brand-mark { width: 26px; height: 26px; }
+  .nav { gap: 12px; }
+  .nav a { font-size: 0.9rem; }
 }
